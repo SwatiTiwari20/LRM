@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Login - Library Management System</title>
+    <link rel="stylesheet" href="userLogin.css">
+</head>
+<body>
+    <div class="login-container">
+        <h2>Library Management System</h2>
+        <form id="userLoginForm">
+            <label for="userId">User ID:</label>
+            <input type="text" id="userId" name="userId" required>
+            
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            
+            <div class="radio">
+                <label><input type="radio" name="userRole" value="User" required> User</label>
+                <label><input type="radio" name="userRole" value="Admin"> Admin</label>
+            </div>
+
+            <div class="checkbox">
+                <label><input type="checkbox" id="rememberMe"> Remember me</label>
+            </div>
+
+            <button type="submit">Login</button>
+            <button type="button" onclick="window.location.href='home.html'">Cancel</button>
+        </form>
+    </div>
+    <script src="usercontroller.js"></script>
+</body>
+</html>

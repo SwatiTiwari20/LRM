@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maintenance Page</title>
+    <link rel="stylesheet" href="css/maintenance.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Maintenance</h1>
+        <button onclick="goHome()">Home</button>
+
+        <h2>Housekeeping</h2>
+
+        <div class="section">
+            <h3>Membership: Add, Update</h3>
+            <button onclick="showTable('memberships')">View Memberships</button>
+            <form id="membershipForm">
+                <h4>Add/Update Membership</h4>
+                <label for="membershipId">Membership Id:</label>
+                <input type="text" id="membershipId" required>
+                <label for="memberName">Name:</label>
+                <input type="text" id="memberName" required>
+                <label for="contactNumber">Contact Number:</label>
+                <input type="text" id="contactNumber" required>
+                <label for="contactAddress">Contact Address:</label>
+                <input type="text" id="contactAddress" required>
+                <label for="aadhar">Aadhar Card No:</label>
+                <input type="text" id="aadhar" required>
+                <label for="startDate">Start Date:</label>
+                <input type="date" id="startDate" required>
+                <label for="endDate">End Date:</label>
+                <input type="date" id="endDate" required>
+                <label for="status">Status:</label>
+                <select id="status" required>
+                    <option value="Active">Active</option>
+                    <option value="Inactive">Inactive</option>
+                </select>
+                <label for="amountPending">Amount Pending:</label>
+                <input type="text" id="amountPending">
+                <button type="button" onclick="submitMembership()">Submit</button>
+            </form>
+        </div>
+
+        <div class="section">
+            <h3>Books/Movies: Add, Update</h3>
+            <button onclick="showTable('books')">View Books</button>
+            <button onclick="showTable('movies')">View Movies</button>
+            <form id="bookMovieForm">
+                <h4>Add/Update Book/Movie</h4>
+                <label for="serialNo">Serial No:</label>
+                <input type="text" id="serialNo" required>
+                <label for="name">Name:</label>
+                <input type="text" id="name" required>
+                <label for="author">Author/Director:</label>
+                <input type="text" id="author" required>
+                <label for="category">Category:</label>
+                <input type="text" id="category" required>
+                <label for="status">Status:</label>
+                <select id="status" required>
+                    <option value="Available">Available</option>
+                    <option value="Checked Out">Checked Out</option>
+                </select>
+                <label for="cost">Cost:</label>
+                <input type="text" id="cost" required>
+                <label for="procDate">Procurement Date:</label>
+                <input type="date" id="procDate" required>
+                <button type="button" onclick="submitBookMovie()">Submit</button>
+            </form>
+        </div>
+
+        <div class="section">
+            <h3>User Management: Add, Update</h3>
+            <button onclick="showTable('users')">View Users</button>
+            <form id="userForm">
+                <h4>Add/Update User</h4>
+                <label for="userId">User ID:</label>
+                <input type="text" id="userId" required>
+                <label for="userName">Name:</label>
+                <input type="text" id="userName" required>
+                <label for="userRole">Role:</label>
+                <select id="userRole" required>
+                    <option value="Admin">Admin</option>
+                    <option value="User">User</option>
+                </select>
+                <button type="button" onclick="submitUser()">Submit</button>
+            </form>
+        </div>
+
+        <button class="logout" onclick="window.location.href='userLogin.html'">Log Out</button>
+    </div>
+    <script src="js/maintenance.js"></script>
+</body>
+</html>

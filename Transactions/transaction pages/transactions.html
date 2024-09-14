@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transactions</title>
+    <link rel="stylesheet" href="transactions.css">
+    <script src="transactions.js" defer></script>
+</head>
+<body>
+    <div class="transactions-container">
+        <h2>Transactions</h2>
+        <button onclick="goHome()">Back to Home</button>
+
+        <h3>Is Book Available?</h3>
+        <form id="checkBookForm">
+            <label for="bookCode">Enter Book Code:</label>
+            <input type="text" id="bookCode" name="bookCode" placeholder="Book Code">
+            
+            <label for="category">Select Category:</label>
+            <select id="category" name="category">
+                <option value="">--Select--</option>
+                <option value="Science">Science</option>
+                <option value="Economics">Economics</option>
+                <option value="Fiction">Fiction</option>
+                <option value="Children">Children</option>
+                <option value="Personal Development">Personal Development</option>
+            </select>
+
+            <button type="submit">Check Availability</button>
+            <p id="availabilityMessage"></p>
+        </form>
+
+        <h3>Issue Book</h3>
+        <form id="issueBookForm">
+            <label for="bookName">Book Name (Required):</label>
+            <input type="text" id="bookName" name="bookName" required>
+            
+            <label for="authorName">Author Name (Auto-populated):</label>
+            <input type="text" id="authorName" name="authorName" readonly>
+
+            <label for="issueDate">Issue Date:</label>
+            <input type="date" id="issueDate" name="issueDate" required>
+
+            <label for="returnDate">Return Date (Max 15 days):</label>
+            <input type="date" id="returnDate" name="returnDate">
+
+            <label for="remarks">Remarks:</label>
+            <textarea id="remarks" name="remarks"></textarea>
+
+            <button type="submit">Issue Book</button>
+            <p id="issueMessage"></p>
+        </form>
+
+        <h3>Return Book</h3>
+        <form id="returnBookForm">
+            <label for="returnBookName">Book Name (Required):</label>
+            <input type="text" id="returnBookName" name="returnBookName" required>
+
+            <label for="returnAuthorName">Author Name (Auto-populated):</label>
+            <input type="text" id="returnAuthorName" name="returnAuthorName" readonly>
+
+            <label for="serialNo">Serial No (Required):</label>
+            <input type="text" id="serialNo" name="serialNo" required>
+
+            <label for="issueDateReturn">Issue Date (Auto-populated):</label>
+            <input type="date" id="issueDateReturn" name="issueDateReturn" readonly>
+
+            <label for="returnDateFinal">Return Date:</label>
+            <input type="date" id="returnDateFinal" name="returnDateFinal">
+
+            <button type="submit">Return Book</button>
+            <p id="returnMessage"></p>
+        </form>
+
+        <h3>Pay Fine</h3>
+        <form id="payFineForm">
+            <label for="fineAmount">Fine Amount (Auto-calculated):</label>
+            <input type="text" id="fineAmount" name="fineAmount" readonly>
+
+            <label for="finePaid">Fine Paid:</label>
+            <input type="checkbox" id="finePaid" name="finePaid">
+
+            <label for="fineRemarks">Remarks:</label>
+            <textarea id="fineRemarks" name="fineRemarks"></textarea>
+
+            <button type="submit">Confirm Payment</button>
+            <p id="fineMessage"></p>
+        </form>
+
+        <button class="logout" onclick="window.location.href='userLogin.html'">Log Out</button>
+    </div>
+</body>
+</html>

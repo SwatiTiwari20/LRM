@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Book/Movie</title>
+    <link rel="stylesheet" href="updateBookMovie.css">
+</head>
+<body>
+    <header>
+        <button onclick="goHome()">Back to Home</button>
+        <h1>Update Book/Movie</h1>
+    </header>
+    
+    <main>
+        <form id="updateBookMovieForm">
+            <fieldset>
+                <legend>Select Type:</legend>
+                <label>
+                    <input type="radio" name="itemType" value="book" checked>
+                    Book
+                </label>
+                <label>
+                    <input type="radio" name="itemType" value="movie">
+                    Movie
+                </label>
+            </fieldset>
+
+            <label for="itemName">Book/Movie Name:</label>
+            <select id="itemName" name="itemName" required>
+                <option value="">Select</option>
+                <!-- Options will be populated dynamically -->
+            </select>
+            
+            <label for="serialNo">Serial No.:</label>
+            <input type="text" id="serialNo" name="serialNo" required>
+
+            <label for="status">Status:</label>
+            <select id="status" name="status" required>
+                <option value="">Select</option>
+                <option value="available">Available</option>
+                <option value="unavailable">Unavailable</option>
+                <!-- Add other status options as needed -->
+            </select>
+
+            <label for="procurementDate">Date of Procurement:</label>
+            <input type="date" id="procurementDate" name="procurementDate" required>
+
+            <button type="button" onclick="cancel()">Cancel</button>
+            <button type="submit">Confirm</button>
+        </form>
+    </main>
+    
+    <footer>
+        <button onclick="logout()">Log Out</button>
+    </footer>
+    
+    <script src="updateBookMovie.js"></script>
+</body>
+</html>

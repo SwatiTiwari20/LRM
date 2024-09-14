@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Membership</title>
+    <link rel="stylesheet" href="updateMembership.css">
+</head>
+<body>
+    <header>
+        <button onclick="goHome()">Back to Home</button>
+        <h1>Update Membership</h1>
+    </header>
+    
+    <main>
+        <form id="updateMembershipForm">
+            <label for="membershipNumber">Membership Number:</label>
+            <input type="text" id="membershipNumber" name="membershipNumber" required>
+            
+            <label for="startDate">Start Date:</label>
+            <input type="date" id="startDate" name="startDate" required>
+            
+            <label for="endDate">End Date:</label>
+            <input type="date" id="endDate" name="endDate" required>
+            
+            <fieldset>
+                <legend>Membership Extension:</legend>
+                <label>
+                    <input type="radio" name="membershipExtension" value="6months" checked>
+                    Six Months
+                </label>
+                <label>
+                    <input type="radio" name="membershipExtension" value="1year">
+                    One Year
+                </label>
+                <label>
+                    <input type="radio" name="membershipExtension" value="2years">
+                    Two Years
+                </label>
+            </fieldset>
+            
+            <fieldset>
+                <legend>Membership Removal:</legend>
+                <label>
+                    <input type="radio" name="membershipRemoval" value="remove">
+                    Remove Membership
+                </label>
+            </fieldset>
+            
+            <button type="button" onclick="cancel()">Cancel</button>
+            <button type="submit">Confirm</button>
+        </form>
+    </main>
+    
+    <footer>
+        <button onclick="logout()">Log Out</button>
+    </footer>
+    
+    <script src="updateMembership.js"></script>
+</body>
+</html>

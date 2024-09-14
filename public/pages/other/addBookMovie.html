@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Book/Movie</title>
+    <link rel="stylesheet" href="addBookMovie.css">
+</head>
+<body>
+    <header>
+        <button onclick="goHome()">Back to Home</button>
+        <h1>Add Book/Movie</h1>
+    </header>
+    
+    <main>
+        <form id="addBookMovieForm">
+            <fieldset>
+                <legend>Select Type:</legend>
+                <label>
+                    <input type="radio" name="itemType" value="book" checked>
+                    Book
+                </label>
+                <label>
+                    <input type="radio" name="itemType" value="movie">
+                    Movie
+                </label>
+            </fieldset>
+            
+            <label for="itemName">Book/Movie Name:</label>
+            <input type="text" id="itemName" name="itemName" required>
+            
+            <label for="procurementDate">Date of Procurement:</label>
+            <input type="date" id="procurementDate" name="procurementDate" required>
+            
+            <label for="quantity">Quantity/Copies:</label>
+            <input type="number" id="quantity" name="quantity" value="1" min="1" required>
+            
+            <button type="button" onclick="cancel()">Cancel</button>
+            <button type="submit">Confirm</button>
+        </form>
+    </main>
+    
+    <footer>
+        <button onclick="logout()">Log Out</button>
+    </footer>
+    
+    <script src="addBookMovie.js"></script>
+</body>
+</html>

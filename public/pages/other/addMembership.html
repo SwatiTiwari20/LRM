@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Membership</title>
+    <link rel="stylesheet" href="addMembership.css">
+</head>
+<body>
+    <div class="container">
+        <button onclick="window.location.href='maintenance.html'">Back to Home</button>
+        <h2>Add Membership</h2>
+        
+        <form id="membershipForm">
+            <label for="firstName">First Name:</label>
+            <input type="text" id="firstName" name="firstName" required>
+            
+            <label for="lastName">Last Name:</label>
+            <input type="text" id="lastName" name="lastName" required>
+            
+            <label for="contactName">Contact Name:</label>
+            <input type="text" id="contactName" name="contactName" required>
+            
+            <label for="contactAddress">Contact Address:</label>
+            <input type="text" id="contactAddress" name="contactAddress" required>
+            
+            <label for="aadhar">Aadhar Card No:</label>
+            <input type="text" id="aadhar" name="aadhar" required>
+            
+            <label for="startDate">Start Date:</label>
+            <input type="date" id="startDate" name="startDate" required>
+            
+            <label for="endDate">End Date:</label>
+            <input type="date" id="endDate" name="endDate" required>
+            
+            <label>Membership Duration:</label>
+            <input type="radio" id="sixMonths" name="duration" value="6 months" checked>
+            <label for="sixMonths">Six Months</label>
+            <input type="radio" id="oneYear" name="duration" value="1 year">
+            <label for="oneYear">One Year</label>
+            <input type="radio" id="twoYears" name="duration" value="2 years">
+            <label for="twoYears">Two Years</label>
+            
+            <button type="button" id="cancelBtn">Cancel</button>
+            <button type="submit" id="confirmBtn">Confirm</button>
+        </form>
+        
+        <button class="logout" onclick="window.location.href='userLogin.html'">Log Out</button>
+    </div>
+    <script src="addMembership.js"></script>
+</body>
+</html>

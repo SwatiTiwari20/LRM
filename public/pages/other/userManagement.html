@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Management</title>
+    <link rel="stylesheet" href="userManagement.css">
+</head>
+<body>
+    <header>
+        <button onclick="goHome()">Back to Home</button>
+        <h1>User Management</h1>
+    </header>
+    
+    <main>
+        <form id="userManagementForm">
+            <fieldset>
+                <legend>Select User Type:</legend>
+                <label>
+                    <input type="radio" name="userType" value="new" checked>
+                    New User
+                </label>
+                <label>
+                    <input type="radio" name="userType" value="existing">
+                    Existing User
+                </label>
+            </fieldset>
+
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label>
+                <input type="checkbox" id="status" name="status">
+                Active
+            </label>
+
+            <label>
+                <input type="checkbox" id="admin" name="admin">
+                Admin
+            </label>
+
+            <button type="button" onclick="cancel()">Cancel</button>
+            <button type="submit">Confirm</button>
+        </form>
+    </main>
+    
+    <footer>
+        <button onclick="logout()">Log Out</button>
+    </footer>
+    
+    <script src="userManagement.js"></script>
+</body>
+</html>
